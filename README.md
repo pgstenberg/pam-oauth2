@@ -17,10 +17,10 @@ $ sudo make install
 ## Configuration
 
 ```
-auth sufficient pam_oauth2.so <introspection_endpoint> <login field> active=true iss=<token_issues>
+auth sufficient pam_oauth2.so <introspection_endpoint> <client_id> <client_secret> <login field> active=true iss=<token_issues>
 ```
 
-> **_NOTE:_** It is important to do a active=true check according to the rfc7662.
+> **_NOTE:_** It is important to check that active=true according to the rfc7662, and that the issuer is correct.
 
 License
 -------
